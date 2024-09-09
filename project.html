@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing:border-box;
+    }
+    body{
+        overflow-x: hidden;
+    }
+      
+
+    .mainnav{ background-color: white;
+        height: 50px;
+        padding: 10px;
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        position: fixed;
+        overflow: hidden;
+        justify-content: space-evenly;
+        background-position: center;
+        animation: navv 6s infinite;
+        animation-iteration-count: 2s;
+        z-index: 2;
+        
+        
+    }
+    .a1{
+        color: #000000;
+        font-size: xx-large;
+        font-style: oblique;
+    }
+    .a1:hover{
+            background-color: rgb(13, 255, 4);
+            height: 40px;
+            
+        }
+     
+
+    .menubar{
+        background-color: black;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        
+        height:500px;
+    }
+    .menu{
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 60px;
+        padding-top: 10%;
+        text-align: center;
+    }
+    .items{
+        background-color: aliceblue;
+        height:400px;
+        color:black
+
+    }
+    .header{
+        background-image:url(pizza2\ ccc.jpg);
+        width:100%;
+        height:1000px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    
+    }
+    .thin{
+        text-align: center;
+        padding-top: 300px;
+        font-style: italic;
+        font-size:xx-large;
+        font-size: 35px;
+    
+        color: rgb(255, 255, 255);
+        animation: header 2s infinite;
+        
+    }
+    .crust{
+        text-align: center;
+        font-size: xx-large;
+        color: rgb(245, 245, 245);
+        font-style: italic;
+        font-size: 35px;
+        animation: header 2s infinite;
+    }
+    .see{
+     color: aliceblue;
+     text-align: center;
+     background-color: black;
+     width: 300px;
+     font-style: oblique;
+     font-size: xx-large;
+     animation: header 2s infinite;
+    }
+    .open{ 
+         color: aliceblue;
+        background-color: rgb(0, 0, 0);
+        height:30px;
+        width: 220px;
+        margin: 20px;
+        font-style: oblique;
+        animation: header 1s infinite;
+         }
+      
+    
+
+        
+         .pizzamenu{
+            background-color: #333;
+            height: 700px;
+            overflow: hidden;
+            width:100%;
+            animation: pizza 2s infinite;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            border: solid 2px #333;
+        }
+        .head {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .menu-section {
+            background: #fff;
+            margin: 0;
+            padding: 1px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: 400ms;
+        }
+
+        .menu-section:hover{
+            transform: scale(0.9);
+        }
+        .menu-section h2 {
+        padding: 0;
+            color: #333;
+            display: flex;
+        }
+        .menu-item {
+            margin-bottom: 10px;
+            padding: 5;
+            border-bottom: 1px solid #dd1212;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .menu-item h3 {
+            margin: 0;
+            color: #555;
+        }
+        .menu-item p {
+            margin: 0;
+            color: #777;
+        }
+        .menu-item .price {
+            font-weight: bold;
+            color: #333;
+        }
+        .headp{
+            display: flex;
+            justify-content:space-evenly;
+            font-size: 40px;
+            font-style: oblique;
+        }
+
+
+        .about{
+            background-color:rgb(127, 87, 87);
+            height: 1000px;
+            color: #fff;
+            width:100%;
+            /* overflow: hidden; */
+            animation: about 3s infinite;
+
+    
+        }
+
+        .cen{
+            display: flex;
+            justify-content: space-between;
+        }
+        .abt{
+            font-style: oblique;
+
+        }
+        .pp{
+            font-style: italic;
+            margin-left: 10%;
+            margin-right: 10%;
+            
+        }
+        .chef{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: oblique;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .chef img{
+            transition: 400ms;
+        }
+        .chef img:hover{
+            transform: scale(1.03);
+        }
+       
+
+        .rest{
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        .rest img{
+            transition: 400ms;
+        }
+        .rest img:hover{
+            transform: scale(0.9);
+        }
+
+        .openhours{
+            display: flex;
+            gap: 200px;
+            margin-left: 10%;
+            font-family:'Times New Roman', Times, serif;
+            font-style: oblique;
+        }
+        .op{
+            margin-left: 10%;
+        }
+        .contact{
+            background-color: #777;
+            height: 600px;
+            width:100%;
+            overflow: hidden;
+        }
+        .powered{
+            background-color: black;
+            height: 100px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            font-style: italic;
+            font-size: x-large;
+            overflow:hidden;
+        }
+        
+        .pmenu{font-size: xx-large; 
+            font-style: italic;
+            font-size: 50px;
+            animation: pizza 2s infinite;
+
+        }
+        .hover2:hover{
+            background-color: #dd1212;
+        }
+
+        .cardspizza{
+        width: 100%;
+        height: fit-content;
+    }
+    .pizza-card {
+  width: 33.33%;
+  gap:9px;
+  height: 400px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.pizza-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 10px 10px;
+}
+.pizza-image2{
+    width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.pizza-info {
+  padding: 0px;
+}
+
+.pizza-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.pizza-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.pizza-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.order-btn {
+  background-color: #ff69b4;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.order-btn:hover {
+  background-color: #ff7fbd;
+}
+.pizzacontain{
+    width: 100%;
+    display: flex;
+}
+.pizzacontain2{
+    width: 100%;
+    display: flex;
+}
+
+
+
+        .map{ transition: 1s ;
+
+        }
+        .map:hover{
+            transform: rotate(360deg);
+        }
+
+        .we{
+        margin-left: 20%;
+        width: 800px;
+        font-style: oblique;
+    }
+    .reserve{
+        margin-left: 20%;
+        width: 800px;
+        font-style: italic;
+    }
+    .name{ margin-left: 20%;
+        height:50px;
+        width: 800px;
+
+    }
+    .how{ margin-left: 20%;
+        width: 800px;
+        height: 50px;
+
+    }
+    .date{ margin-left: 20%;
+        width: 800px;
+        height: 50px;
+
+    }
+    .special{ margin-left: 20%;
+        width: 800px;
+        height: 100px;
+
+    }
+    .send{
+        margin-left: 20%;
+        background-color: black;
+        width: 130px;
+        color: white;
+        
+    }
+     .contactus{
+        text-align: center;
+        background-color: white;
+        width: 150px;
+        animation: header 1s infinite;
+        
+
+        
+        
+        
+     }
+     .find{
+        font-style: italic;
+        margin-left: 20%;
+        width:800px;
+     }
+     .message{
+        font-style: italic;
+        margin-left: 20%;
+        width:800px;
+        height: 50px;
+     }
+
+
+     @keyframes navv{
+        0%{
+            background-color: rgb(116, 124, 124);
+        }
+        100%{
+            background-color: #ffffff;
+        }
+        }
+
+        @keyframes header{
+            0%{
+                opacity: 0;
+                color: aqua;
+                
+            }
+            50%{
+                opacity: 0;
+                color: aqua;
+            }
+        }
+        @keyframes pizza{
+            0%{
+                color: darkmagenta;
+            }
+            50%{
+                color: darkgoldenrod;
+            }
+
+        }@keyframes about{
+            from{
+                background-color: royalblue;
+            }
+            to{
+                background-color:rgb(127, 87, 87);;
+            }
+        }
+
+
+        @media only screen and (width<500px){
+            .mainnav{
+                   color:black;
+                }
+                .a1{
+                    font-style: italic;
+                    font-size: x-large ;
+                }
+            .header{
+                background-image:url(pizza2\ ccc.jpg);
+        width:100%;
+        height:100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        
+               
+            }
+            .thin {
+        padding-top: 10%;
+        height: 30px;
+        
+    }
+    .crust {
+        color:white;
+        padding-top: 15%;
+        height: 30px;
+        
+    }
+    .open{ padding-top: 10px !important;
+         
+    }
+     
+    .see{
+        margin-top: 20%;
+    }
+
+
+                
+            
+            /* .header,.thin,.crust,.see,.open{
+                
+                width: 500px;
+                color:#dd1212;
+            } */
+            .pizzamenu,.headp{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: small;
+            
+                
+            }
+            .openhours{
+            display: flex;
+            gap: 100px;
+            margin-left: 10%;
+            font-family:'Times New Roman', Times, serif;
+            font-style: oblique;
+            }
+            .pizza-card {
+                    width: 33.33%;
+                    gap:9px;
+                    height: 400px;
+                    border: 1px solid #ddd;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 20px;
+                    }
+           
+        
+        
+           .we, .find{
+            margin-left: 1%;
+            width: 450px;
+            font-style: oblique;
+            font-size: medium;
+            
+           }
+           .reserve, .name, .how, .date, .message, .send{
+            margin-left: 1%;
+            font-style: oblique;
+            font-size: medium;
+            
+            width:450px;
+           }
+          
+           
+          
+           
+            
+
+        }
+        
+
+        
+
+
+</style>
+<body>
+    <!-- Navbar-->
+
+    <div class="mainnav" >
+      <a href="#h" class="a1">HOME</a>
+      <a href="#pizzam" class="a1">MENU</a>
+      <a href="#aboutt" class="a1">ABOUT</a>
+      <a href="#contactt" class="a1">CONTACT</a>
+    </div>
+    
+  
+
+  <!-- Header with image -->
+   <article id="h">
+<div class="header" >
+
+<div class="thin"><h1>thin</h1></div>
+<div class="crust"> <h1>crust pizza</h1></div>
+<center><div class="see">let me see the menu</div></center>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="open">OPEN FROM 10AM TO 12PM</div>
+</div>
+
+</article>
+
+<!--pizza menu-->
+<article id="pizzam">
+<div class="pizzamenu">
+    <div class="container">
+        <div class="head">
+            <h1  class="pmenu"style="font-size: xx-large; animation: pizza 2s infinite;">Pizza Menu<h1>
+                
+        </div>
+    
+        <div class="menu-section">
+            <div class="headp">
+            <h2  class="hover2">Pizza</h2>
+            <h2 class="hover2"> salad </h2>
+            <h2 class="hover2">  starter</h2>
+            </div>
+            <div class="menu-item">
+                <h3>Margherita</h3>
+                <p>Fresh tomatoes, fresh mozzarella, fresh basil</p>
+                <p class="price">$12.50</p>
+            </div>
+            <div class="menu-item">
+                <h3>Formaggio</h3>
+                <p>Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+                <p class="price">$15.50</p>
+            </div>
+            <div class="menu-item">
+                <h3>Chicken</h3>
+                <p>Fresh tomatoes, mozzarella, chicken, onions</p>
+                <p class="price">$17.00</p>
+            </div>
+            <div class="menu-item">
+                <h3>Pineapple'o'clock</h3>
+                <p>Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
+                <p class="price">$16.50</p>
+            </div>
+            <div class="menu-item">
+                <h3>Meat Town Hot!</h3>
+                <p>Fresh tomatoes, mozzarella, hot pepperoni, hot sausage, beef, chicken</p>
+                <p class="price">$20.00</p>
+            </div>
+            <div class="menu-item">
+                <h3>Parma New</h3>
+                <p>Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+                <p class="price">$21.50</p>
+            </div>
+        </div>
+    </div>
+</div>
+</article>
+<div class="cardspizza">
+    <div class="pizzacontain">
+    <div class="pizza-card">
+        <img src="pizza2 ccc.jpg" alt="Pizza Image" class="pizza-image">
+        <div class="pizza-info">
+          <h2 class="pizza-name">Margherita</h2>
+          <p class="pizza-description">Fresh tomatoes, mozzarella, and basil</p>
+          <p class="pizza-price">$15.99</p>
+          <button class="order-btn">Order Now</button>
+        </div>
+      </div>
+      <div class="pizza-card">
+        <img src="pizza3.jpg" alt="Pizza Image" class="pizza-image">
+        <div class="pizza-info">
+          <h2 class="pizza-name">Margherita</h2>
+          <p class="pizza-description">Fresh tomatoes, mozzarella, and basil</p>
+          <p class="pizza-price">$15.99</p>
+          <button class="order-btn">Order Now</button>
+        </div>
+      </div>
+      <div class="pizza-card">
+        <img src="pizza2 ccc.jpg" alt="Pizza Image" class="pizza-image">
+        <div class="pizza-info">
+          <h2 class="pizza-name">Margherita</h2>
+          <p class="pizza-description">Fresh tomatoes, mozzarella, and basil</p>
+          <p class="pizza-price">$15.99</p>
+          <button class="order-btn">Order Now</button>
+        </div>
+      </div>
+      
+     
+    </div>
+
+    <div class="pizzacontain">
+        <div class="pizza-card">
+            <img src="pizza2 ccc.jpg" alt="Pizza Image" class="pizza-image">
+            <div class="pizza-info">
+              <h2 class="pizza-name">Margherita</h2>
+              <p class="pizza-description">Fresh tomatoes, mozzarella, and basil</p>
+              <p class="pizza-price">$15.99</p>
+              <button class="order-btn">Order Now</button>
+            </div>
+          </div>
+
+          <div class="pizza-card">
+            <img src="pizza3.jpg" alt="Pizza Image" class="pizza-image">
+            <div class="pizza-info">
+              <h2 class="pizza-name">Margherita</h2>
+              <p class="pizza-description">Fresh tomatoes, mozzarella, and basil</p>
+              <p class="pizza-price">$15.99</p>
+              <button class="order-btn">Order Now</button>
+            </div>
+          </div>
+          <div class="pizza-card">
+            <img src="pizza2 ccc.jpg" alt="Pizza Image" class="pizza-image">
+            <div class="pizza-info">
+              <h2 class="pizza-name">Margherita</h2>
+              <p class="pizza-description">Fresh tomatoes, mozzarella, and basil</p>
+              <p class="pizza-price">$15.99</p>
+              <button class="order-btn">Order Now</button>
+            </div>
+          </div>
+       
+</div>
+
+<!--about us-->
+<article id="aboutt">
+<div class="about">
+ <br>
+  <center><h1 class="abt">AboUt</h1></center>
+ <p class="pp" >The Pizza Restaurant was founded in blabla by Mr. Italiano in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+       
+    
+       <div class="cen">
+    
+        <div class="chef">
+            <p>The Chef? Mr. Italiano himself</p>
+            
+            <p>We are proud of our interiors.</p>
+        </div>
+    
+        <div class="chef">
+            <img img src="chef.jpg" width="100px" style="border-radius: 50%;">
+        </div>
+       </div>
+        <div class="rest">
+            <img src="onepage_restaurant.jpg" width="100%" height="600px">
+        </div>
+         <br>
+         <h1 class="op">OpeN HoUrS</h1>
+         <br>
+         <div class="openhours">
+            <div>
+            <p>Mon & Tue CLOSED</p><br>
+            <p>Wednesday 10.00 - 24.00</p><br>
+            <p>Thursday 10:00 - 24:00</p>
+            </div>
+            <div>
+            <p>Friday 10:00 - 12:00</p><br>
+            <p>Saturday 10:00 - 23:00</p><br>
+            <p>Sunday Closed</p>
+            </div>
+         </div>
+          
+ </div>
+
+</div>
+</article>
+<!-- cards images -->
+
+
+<!-- map image -->
+<div class="map">
+    <img src="map.jpg" width="100%">
+
+</div>
+
+<!-- contact section -->
+ <article id="contactt">
+<div class="contact">
+    <br><center><h1 class="contactus"> CoNTaCT Us </h1></center>
+    <br>
+    <br>
+    <h2 class="find">Find us at some address at some place or call us at 05050515-122330</h2>
+    <br>
+    <h2 class="we"> <strong>FYI</strong> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</h2>
+    <br>
+    <h2 class="reserve" > <strong>Reserve</strong> a table, ask for today's special or just send us a message:</h2>
+    <br>
+    
+    <input type="text" placeholder="name" class="name"><br><br>
+    <input type="text" placeholder="how many people" class="how"><br><br>
+    <input type="datetime-local" class="date"><br><br>
+    <input type="text" placeholder="message/special requirements" class="message"><br><br>
+    <input type="text" placeholder="send message" class="send">
+    
+</article>
+</div>
+</article>
+
+<div class="powered " style="padding-top: 30px;">
+    
+    <a href="https://www.w3schools.com/" >powered by w3.css</a>
+
+</div>
+
+
+    
+</body>
+</html>
